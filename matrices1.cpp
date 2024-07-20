@@ -5,7 +5,7 @@
 using namespace std;
 
 int main(){
-	int i,n,j;
+	int i,n,j, s;
 	int elementos[100][100];
 	cout<<"Ingrese la dimension de la matriz: ";
 	cin>>n;
@@ -13,8 +13,12 @@ int main(){
 		for(int j=1; j<=n; j++){
 			cout<<"Ingrese el elemento "<<i<<"x"<<j<<" : ";
 			cin>>elementos[i][j];
+			if(i<j){
+			s = s + elementos [i][j];
+		}
 		}
 	}
+	
 		cout<<" "<<endl;
 	cout<<"Los elementos de la matriz son: "<<endl;
 	cout<<" "<<endl;
@@ -26,5 +30,7 @@ int main(){
 		cout<<"| ";
 	cout<<" "<<endl;
 	}
-	                                                                                                                                                        
+	cout<<" "<<endl;
+	cout<<"La sumatoria de los elementos por encima de la diagonal principal es: "<<s;
+	                                                                                                                                                      
 }
